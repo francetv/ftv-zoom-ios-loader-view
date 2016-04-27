@@ -19,6 +19,7 @@ class LoaderView: UIView {
 
     private var phase = 0
     private var maskingLayer: CALayer!
+    private var loaderLayer: LoaderLayer!
     private var isStarted = false
 
 
@@ -44,16 +45,15 @@ class LoaderView: UIView {
         backgroundColor = UIColor.clearColor()
         opaque = false
         layer.contentsScale = UIScreen.mainScreen().scale
+        loaderLayer = LoaderLayer()
+        loaderLayer.frame = frame
+        layer.addSublayer(loaderLayer)
 
         let maskingImage = UIImage(named: "LoaderBlack.png")!
         maskingLayer = CALayer()
         maskingLayer.frame = bounds
         maskingLayer.contents = maskingImage.CGImage
         layer.mask = maskingLayer
-    }
-
-    private var loaderLayer: LoaderLayer {
-        return layer as! LoaderLayer
     }
 
     // MARK: - Animation
