@@ -14,7 +14,6 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
 
         let loader = LoaderView()
-        loader.layer.foreground
 
         let constraints = [
             NSLayoutConstraint(item: loader, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal,
