@@ -18,26 +18,30 @@ set its constraints and add it to your view as follows:
 ```Swift
 override func viewWillAppear(animated: Bool) {
 
-        super.viewWillAppear(animated)
-        addLoader()
-    }
+    super.viewWillAppear(animated)
+    addLoader()
+}
 
-    private func addLoader() {
-        let loader = LoaderView()
+private func addLoader() {
 
-        let constraints = [
-            NSLayoutConstraint(item: loader, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal,
-                toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: loader.frame.width),
-            NSLayoutConstraint(item: loader, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: loader.frame.height),
-            NSLayoutConstraint(item: loader, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: loader, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 0)]
+    let loader = LoaderView()
 
-        view.addSubview(loader)
-        view.addConstraints(constraints)
-        view.setNeedsLayout()
+    let constraints = [
+        NSLayoutConstraint(item: loader, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal,
+            toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: loader.frame.width),
+        NSLayoutConstraint(item: loader, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, 
+            toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: loader.frame.height),
+        NSLayoutConstraint(item: loader, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, 
+            toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0),
+        NSLayoutConstraint(item: loader, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, 
+            toItem: view, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 0)]
 
-        loader.startAnimation()
-    }
+    view.addSubview(loader)
+    view.addConstraints(constraints)
+    view.setNeedsLayout()
+
+    loader.startAnimation()
+}
 ```
 
 ## Example
