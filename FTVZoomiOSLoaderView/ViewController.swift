@@ -10,16 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        let loader = LoaderView()
+        loader.layer.foreground
+
+        let constraints = [
+            NSLayoutConstraint(item: loader, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal,
+                toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: loader.frame.width),
+            NSLayoutConstraint(item: loader, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: loader.frame.height),
+            NSLayoutConstraint(item: loader, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: loader, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 0)]
+
+        view.addSubview(loader)
+        view.addConstraints(constraints)
+        view.setNeedsLayout()
+
+        loader.startAnimation()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

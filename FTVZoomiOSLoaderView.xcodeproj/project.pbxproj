@@ -12,6 +12,7 @@
 		5CBBBA111CD0EBAC00BE0CBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CBBBA0F1CD0EBAC00BE0CBD /* Main.storyboard */; };
 		5CBBBA131CD0EBAC00BE0CBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CBBBA121CD0EBAC00BE0CBD /* Assets.xcassets */; };
 		5CBBBA161CD0EBAC00BE0CBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CBBBA141CD0EBAC00BE0CBD /* LaunchScreen.storyboard */; };
+		5CBBBA1E1CD0ED5900BE0CBD /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBBA1D1CD0ED5900BE0CBD /* LoaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5CBBBA121CD0EBAC00BE0CBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CBBBA151CD0EBAC00BE0CBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CBBBA171CD0EBAC00BE0CBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CBBBA1D1CD0ED5900BE0CBD /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				5CBBBA0B1CD0EBAC00BE0CBD /* AppDelegate.swift */,
 				5CBBBA0D1CD0EBAC00BE0CBD /* ViewController.swift */,
+				5CBBBA1D1CD0ED5900BE0CBD /* LoaderView.swift */,
 				5CBBBA0F1CD0EBAC00BE0CBD /* Main.storyboard */,
 				5CBBBA121CD0EBAC00BE0CBD /* Assets.xcassets */,
 				5CBBBA141CD0EBAC00BE0CBD /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				5CBBBA0E1CD0EBAC00BE0CBD /* ViewController.swift in Sources */,
 				5CBBBA0C1CD0EBAC00BE0CBD /* AppDelegate.swift in Sources */,
+				5CBBBA1E1CD0ED5900BE0CBD /* LoaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
