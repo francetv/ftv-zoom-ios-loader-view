@@ -11,8 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
 
+        super.viewWillAppear(animated)
+        addLoader()
+    }
+
+    private func addLoader() {
         let loader = LoaderView()
 
         let constraints = [
