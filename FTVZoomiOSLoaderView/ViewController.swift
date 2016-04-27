@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     }
 
     private func addLoader() {
+        
         let loader = LoaderView()
 
         let constraints = [
